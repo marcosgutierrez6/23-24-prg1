@@ -81,7 +81,7 @@ class Camellos {
                 }
 
             } else if (elección == 4) {
-                if (probabilidad <= 100) {
+                if (probabilidad <= 10) {
                     casilla = casilla + 6;
                     avance = 6;
                     acierto = true;
