@@ -13,11 +13,11 @@ public class CamellosAmpliado {
         int avance = 0;
         boolean jugando = true;
         int turno = 0;
-        String casillasAvanzadas = " ";
+        String casillasAvanzadasDibujadas = " ";
         boolean acierto = false;
         int fallos = 0;
         int casillasOrdenador = 0;
-        String casillasAvanzadasO = " ";
+        String casillasAvanzadasDibujadasO = " ";
         int posCasillaOrdenador = 0;
 
         while (jugando) {
@@ -25,7 +25,7 @@ public class CamellosAmpliado {
 
             if (fallos == 3) {
                 casilla = 0;
-                casillasAvanzadas = " ";
+                casillasAvanzadasDibujadas = " ";
             }
 
             System.out.println(
@@ -38,14 +38,14 @@ public class CamellosAmpliado {
                             "---+-----------+---------+---------+---------+---------+-----------+-----------+-----------+-----------+-----------+-----------+\r\n");
             if (acierto == true) {
                 for (int i = 0; i < avance; i++) {
-                    casillasAvanzadas = casillasAvanzadas + "  ";
+                    casillasAvanzadasDibujadas = casillasAvanzadasDibujadas + "  ";
                 }
             }
             for (int i = 0; i < casillasOrdenador; i++) {
-                casillasAvanzadasO = casillasAvanzadasO + "  ";
+                casillasAvanzadasDibujadasO = casillasAvanzadasDibujadasO + "  ";
             }
-            System.out.println("[J]|" + casillasAvanzadas + ";--;'");
-            System.out.println("[O]|" + casillasAvanzadasO + ";--;'");
+            System.out.println("[J]|" + casillasAvanzadasDibujadas + ";--;'");
+            System.out.println("[O]|" + casillasAvanzadasDibujadasO + ";--;'");
 
             System.out.println(
                     "---+-----------+---------+---------+---------+---------+-----------+-----------+-----------+-----------+-----------+-----------+");
