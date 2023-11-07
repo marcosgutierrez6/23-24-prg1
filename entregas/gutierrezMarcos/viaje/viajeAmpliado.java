@@ -39,7 +39,7 @@ class viajeAmpliado {
                 System.out.println("Ha hecho un buen día");
             }
 
-            horasDiarias = (Math.random() * 2) + 8;
+            horasDiarias = (Math.random() * 8) + 2;
             horasDiariasMadre = (Math.random() * 6) + 3;
             probabilidadMono = (int) (Math.random() * 100);
 
