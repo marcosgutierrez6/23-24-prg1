@@ -28,7 +28,7 @@ class viaje {
             }else{
                 System.out.println("Ha hecho un buen día");
             }
-            horasDiarias = (Math.random() * 2) + 8;
+            horasDiarias = (Math.random() * 8) + 2;
             probabilidadMono = (int) (Math.random() * 100);
             if (probabilidadMono <= 15) {
                 horasDiarias = horasDiarias - 2;
