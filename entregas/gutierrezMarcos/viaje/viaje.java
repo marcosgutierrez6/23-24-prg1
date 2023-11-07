@@ -20,10 +20,10 @@ class viaje {
             clima = (int) (Math.random() * 100);
             System.out.println("DIA "+ dia);
             if (clima <= 10) {
-                velocidadDiaria = velocidadDiaria * 0.75;
+                velocidadDiaria = velocidadDiaria * 0.25;
                 System.out.println("Ha llovido un poco");
             } else if (clima > 10 && clima <= 30) {
-                velocidadDiaria = velocidadDiaria * 0.75;
+                velocidadDiaria = velocidadDiaria * 0.25;
                 System.out.println("¡Ha llovido muchísimo!");
             }else{
                 System.out.println("Ha hecho un buen día");
