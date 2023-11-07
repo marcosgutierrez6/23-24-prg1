@@ -22,7 +22,7 @@ class viajeAmpliado {
             dia++;
 
             probabilidadEncontrarAlguien = (int)(Math.random() *100);
-            velocidadDiariaMadre = (Math.random() * 6) + 3;
+            velocidadDiariaMadre = (Math.random() * 6) + 3; 
             velocidadDiaria = (Math.random() * 5) + 10;
             clima = (int) (Math.random() * 100);
             
@@ -57,6 +57,7 @@ class viajeAmpliado {
             if(kilometrosMadreMarco <= 50){
                 if(probabilidadEncontrarAlguien <= 50){
                     kilometrosTotales = kilometrosTotales + 25;
+                    System.out.println("A Marco le dicen que han visto a su mamá, y rompe a correr!!!");
                 }
 
             }
