@@ -84,7 +84,7 @@ class viajeAmpliado {
             }else{
                 System.out.println("A mamá le ha hecho un buen día");
             }
-            kilometrosTotalesMadre = kilometrosMadre + horasDiariasMadre;
+            kilometrosTotalesMadre = velocidadDiariaMadre * horasDiariasMadre;
             System.out.println("Mama pudo avanzar "+ horasDiariasMadre +" horas a "+ velocidadDiariaMadre +" Km/h recorriendo "+ kilometrosTotalesMadre +" Km");
             System.out.println("Al final del día "+ kilometrosTotales +" la distancia entre Marco y su Madre es de "+ kilometrosMadreMarco);
 
