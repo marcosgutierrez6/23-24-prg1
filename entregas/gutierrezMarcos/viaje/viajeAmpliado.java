@@ -28,11 +28,11 @@ class viajeAmpliado {
             
             System.out.println("DIA "+ dia);
             if (clima <= 10) {
-                velocidadDiaria = velocidadDiaria * 0.75;
+                velocidadDiaria = velocidadDiaria * 0.25;
                 velocidadDiariaMadre = velocidadDiariaMadre * 0.5;
                 System.out.println("Ha llovido un poco");
             } else if (clima > 10 && clima <= 30) {
-                velocidadDiaria = velocidadDiaria * 0.75;
+                velocidadDiaria = velocidadDiaria * 0.25;
                 velocidadDiariaMadre = velocidadDiariaMadre * 0.5;
                 System.out.println("¡Ha llovido muchísimo!");
             }else{
