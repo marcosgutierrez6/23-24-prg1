@@ -12,7 +12,7 @@ class viajeAmpliado {
         int dia = 0;
         double kilometrosMadre = 350;
         boolean encuentro = false;
-        double kilometrosMadreMarco = 350;
+        double kilometrosMadreMarco = 400;
         int probabilidadEncontrarAlguien = 0;
 
         System.out.println("DIARIO DEL VIAJE DE MARCO");
