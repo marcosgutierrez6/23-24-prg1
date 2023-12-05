@@ -1,17 +1,15 @@
-package ExamenParcialPRG1;
-
 public class Edificio {
     public static void main(String[] args) {
         String estadisticaLuz = "ESTADISTICAS: ";
         for (int dia = 1; dia <= 7; dia++) {
             int horasLuzDia = 0;
-
             boolean mantenimiento = Math.random() < 0.05;
             int plantaMantenimiento = (int) (Math.random() * 7) + 1;
 
             boolean rayo = Math.random() < 0.2;
             int columnaImpactada = (int) (Math.random() * 6) + 1;
             for (int horas = 1; horas <= 24; horas++) {
+                cleanScreen();
                 int horasLuz = 0;
                 System.out.println("Dia " + dia);
                 System.out.println("> Son las " + horas);
@@ -35,7 +33,7 @@ public class Edificio {
                 horasLuzDia = horasLuzDia + horasLuz;
                 System.out.println("Horas luz: " + horasLuz);
                 System.out.println(estadisticaLuz);
-
+                pause(1);
             }
             estadisticaLuz = estadisticaLuz + "Dia [" + dia + "] consumo [" + horasLuzDia + "] - ";
         }
@@ -52,4 +50,15 @@ public class Edificio {
         return "[']";
     }
 
+    static void cleanScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+
+    static void pause(int segundos) {
+        try {
+            Thread.sleep(1000 * segundos);
+        } catch (InterruptedException e) {
+        }
+    }
 }
