@@ -2,9 +2,6 @@ public class Aspiradora {
     private static int filas = 25;
     private static int columnas = 10;
     private static String[][] matriz = new String[filas][columnas];
-    private static int posicionX;
-    private static int posicionY;
-
     public static void main(String[] args) {
         inicializarMapa();
         mapa();
@@ -40,7 +37,78 @@ public class Aspiradora {
                 matriz[24][9] = "+";
             }
         }
-        matriz[posAspiradoraY()][posAspiradoraX()] = "(0)";
+        moverAspiradora();
+        
+    }
+
+    private static void moverAspiradora() {
+        int posicionInicialX = posAspiradoraXInicial();
+        int posicionInicialY = posAspiradoraYInicial();
+        matriz[posicionInicialY][posicionInicialX] = "(0)";
+
+        int direccion = (int) (Math.random() * 8) + 1;
+
+        if (direccion == 1) {
+            arriba(posicionInicialY, posicionInicialX);
+        } else if (direccion == 2) {
+            abajo(posicionInicialY, posicionInicialX);
+        } else if (direccion == 3) {
+            derecha(posicionInicialY, posicionInicialX);
+        } else if (direccion == 4) {
+            izquierda(posicionInicialY, posicionInicialX);
+        } else if (direccion == 5) {
+            arribaDerecha(posicionInicialY, posicionInicialX);
+        } else if (direccion == 6) {
+            arribaIzquierda(posicionInicialY, posicionInicialX);
+        } else if (direccion == 7) {
+            abajoDerecha(posicionInicialY, posicionInicialX);
+        } else if (direccion == 8) {
+            abajoIzquierda(posicionInicialY, posicionInicialX);
+        }
+    }
+
+    private static void arriba(int y, int x) {
+        y -= 1;
+        matriz[y][x] = "(0)";
+    }
+
+    private static void abajo(int y, int x) {
+        y += 1;
+        matriz[y][x] = "(0)";
+    }
+
+    private static void derecha(int y, int x) {
+        x += 1;
+        matriz[y][x] = "(0)";
+    }
+
+    private static void izquierda(int y, int x) {
+        x -= 1;
+        matriz[y][x] = "(0)";
+    }
+
+    private static void arribaDerecha(int y, int x) {
+        y -= 1;
+        x += 1;
+        matriz[y][x] = "(0)";
+    }
+
+    private static void abajoDerecha(int y, int x) {
+        y += 1;
+        x += 1;
+        matriz[y][x] = "(0)";
+    }
+
+    private static void abajoIzquierda(int y, int x) {
+        y += 1;
+        x -= 1;
+        matriz[y][x] = "(0)";
+    }
+
+    private static void arribaIzquierda(int y, int x) {
+        y -= 1;
+        x -= 1;
+        matriz[y][x] = "(0)";
     }
 
     private static void mapa() {
@@ -62,7 +130,7 @@ public class Aspiradora {
         return (int) Math.round(Math.random() * 3 + 1);
     }
 
-    private static int posAspiradoraX() {
+    private static int posAspiradoraXInicial() {
         int x;
         do {
             x = (int) (Math.random() * 10);
@@ -70,7 +138,7 @@ public class Aspiradora {
         return x;
     }
 
-    private static int posAspiradoraY() {
+    private static int posAspiradoraYInicial() {
         int y;
         do {
             y = (int) (Math.random() * 25);
