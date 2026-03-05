@@ -28,39 +28,89 @@ public class ExamenParcialPRG1 {
                         "  |    |    |  |####|  |    |    |  \r\n" + 
                         "====================================");
                 
-                for (int k = 7; k >= 1; k--) {
-                    if (rayoDiario < 1) {
-                        if (columnaImpactada > 0) {
-                            if (columnaImpactada == 1) {
-                                System.out.println(":[X]::" + estadoVentana() + "::" + estadoVentana()+ ":[    ]:"+ estadoVentana() + "::" + estadoVentana() + "::" + estadoVentana()+ ": - P" + k);
-                            } else if (columnaImpactada == 2) {
-                                System.out.println(":" + estadoVentana() + "::[X]::" + estadoVentana()+ ":[    ]:"+ estadoVentana() + "::" + estadoVentana() + "::" + estadoVentana()+ ": - P" + k);
-                            } else if (columnaImpactada == 3) {
-                                System.out.println(":" + estadoVentana() + "::" + estadoVentana() + "::[X]:[    ]:"+ estadoVentana() + "::" + estadoVentana() + "::" + estadoVentana()+ ": - P" + k);
-                            } else if (columnaImpactada == 4) {
-                                System.out.println(":" + estadoVentana() + "::" + estadoVentana() + "::" + estadoVentana() + ":[    ]:[X]::" + estadoVentana() + "::" + estadoVentana()+ ": - P" + k);
-                            } else if (columnaImpactada == 5) {
-                                System.out.println(":" + estadoVentana() + "::" + estadoVentana() + "::" + estadoVentana()+ ":[    ]:" + estadoVentana() + "::[X]::" + estadoVentana()+ ": - P" + k);
-                            } else if (columnaImpactada == 6) {
-                                System.out.println(":" + estadoVentana() + "::" + estadoVentana() + "::" + estadoVentana()+ ":[    ]:" + estadoVentana() + "::" +estadoVentana() + "::[X]: - P" + k);
-                            }
-                        } else {
-                            System.out.println(":" + estadoVentana() + "::" + estadoVentana() + "::" + estadoVentana() + ":[    ]:"+ estadoVentana() + "::" + estadoVentana() + "::" + estadoVentana()+ ": - P"+ k);
-                        }
-                    } else if (mantenimientoDiario < 1) {
-                        if (mantenimiento()) {
-                            mantenimientoDiario++;
-                            int plantaEnMantenimiento = (int) (Math.random() * 7) + 1;
-                            if (plantaEnMantenimiento == k) {
-                                System.out.println(":[#]::[#]::[#]:[    ]:[#]::[#]::[#]: - P" + k);
-                                k--;
-                            }
-                        } else {
-                            System.out.println(":" + estadoVentana() + "::" + estadoVentana() + "::" + estadoVentana() + ":[    ]:"+ estadoVentana() + "::" + estadoVentana() + "::" + estadoVentana()+ ": - P"+ k);
-                        }
-                    } else {
-                        System.out.println(":" + estadoVentana() + "::" + estadoVentana() + "::" + estadoVentana() + ":[    ]:"+ estadoVentana() + "::" + estadoVentana() + "::" + estadoVentana() + ": - P"+ k);
-                    }
+            for (int k = 7; k >= 1; k--) {
+                                if (rayoDiario < 1) {
+                                    if (columnaImpactada > 0) {
+                                        if (columnaImpactada == 1) {
+                                            // 1. Partimos la cadena respetando el límite visual (Wrap lines)
+                                            System.out.println(":[X]::" + estadoVentana() + 
+                                                            "::" + estadoVentana() + 
+                                                            ":[    ]:" + estadoVentana() + 
+                                                            "::" + estadoVentana() + 
+                                                            "::" + estadoVentana() + 
+                                                            ": - P" + k);
+                                        } else if (columnaImpactada == 2) {
+                                            System.out.println(":" + estadoVentana() + 
+                                                            "::[X]::" + estadoVentana() + 
+                                                            ":[    ]:" + estadoVentana() + 
+                                                            "::" + estadoVentana() + 
+                                                            "::" + estadoVentana() + 
+                                                            ": - P" + k);
+                                        } else if (columnaImpactada == 3) {
+                                            System.out.println(":" + estadoVentana() + 
+                                                            "::" + estadoVentana() + 
+                                                            "::[X]:[    ]:" + estadoVentana() + 
+                                                            "::" + estadoVentana() + 
+                                                            "::" + estadoVentana() + 
+                                                            ": - P" + k);
+                                        } else if (columnaImpactada == 4) {
+                                            System.out.println(":" + estadoVentana() + 
+                                                            "::" + estadoVentana() + 
+                                                            "::" + estadoVentana() + 
+                                                            ":[    ]:[X]::" + estadoVentana() + 
+                                                            "::" + estadoVentana() + 
+                                                            ": - P" + k);
+                                        } else if (columnaImpactada == 5) {
+                                            System.out.println(":" + estadoVentana() + 
+                                                            "::" + estadoVentana() + 
+                                                            "::" + estadoVentana() + 
+                                                            ":[    ]:" + estadoVentana() + 
+                                                            "::[X]::" + estadoVentana() + 
+                                                            ": - P" + k);
+                                        } else if (columnaImpactada == 6) {
+                                            System.out.println(":" + estadoVentana() + 
+                                                            "::" + estadoVentana() + 
+                                                            "::" + estadoVentana() + 
+                                                            ":[    ]:" + estadoVentana() + 
+                                                            "::" + estadoVentana() + 
+                                                            "::[X]: - P" + k);
+                                        }
+                                    } else {
+                                        System.out.println(":" + estadoVentana() + 
+                                                        "::" + estadoVentana() + 
+                                                        "::" + estadoVentana() + 
+                                                        ":[    ]:" + estadoVentana() + 
+                                                        "::" + estadoVentana() + 
+                                                        "::" + estadoVentana() + 
+                                                        ": - P"+ k);
+                                    }
+                                } else if (mantenimientoDiario < 1) {
+                                    if (mantenimiento()) {
+                                        mantenimientoDiario++;
+                                        int plantaEnMantenimiento = (int) (Math.random() * 7) + 1;
+                                        
+                                        if (plantaEnMantenimiento == k) {
+                                            System.out.println(":[#]::[#]::[#]:[    ]:[#]::[#]::[#]: - P" + k);
+                                            k--;
+                                        }
+                                    } else {
+                                        System.out.println(":" + estadoVentana() + 
+                                                        "::" + estadoVentana() + 
+                                                        "::" + estadoVentana() + 
+                                                        ":[    ]:" + estadoVentana() + 
+                                                        "::" + estadoVentana() + 
+                                                        "::" + estadoVentana() + 
+                                                        ": - P"+ k);
+                                    }
+                                } else {
+                                    System.out.println(":" + estadoVentana() + 
+                                                    "::" + estadoVentana() + 
+                                                    "::" + estadoVentana() + 
+                                                    ":[    ]:" + estadoVentana() + 
+                                                    "::" + estadoVentana() + 
+                                                    "::" + estadoVentana() + 
+                                                    ": - P"+ k);
+                                }
                 }
                 
                 columnaImpactada = 0;
