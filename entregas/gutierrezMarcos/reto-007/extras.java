@@ -1,43 +1,33 @@
-import java.util.Scanner;
-
-class Extras {
-    private static Scanner scanner;
+public class SimuladorCondicionesRuta {
 
     public static void main(String[] args) {
-        scanner = new Scanner(System.in);
 
-        int clima;
-        double metrosBaja;
-        int probabilidadLLuvia = (int) (Math.random() * 100);
+        int estadoClima; 
+        double reduccionMetros;
 
-        int coche;
-        int probabilidadCoche = (int) (Math.random() * 100);
+        int probabilidadLluvia = (int) (Math.random() * 100); 
 
-        if (probabilidadCoche <= 35) {
-            metrosBaja = (int) (Math.random() * 20);
-            metrosBaja = metrosBaja / 10;
-            coche = 1;
+        boolean hayIncidenteCoche;
+        int probabilidadIncidente = (int) (Math.random() * 100);
 
-        }
-        else{
-            metrosBaja = 0;
-            coche = 0;
-        }
-
-
-        if (probabilidadLLuvia <= 5) {
-            clima = 2;
-            metrosBaja = (int) (Math.random() * 50);
-            metrosBaja = metrosBaja / 10;
-
-        } else if (probabilidadLLuvia <= 10 && probabilidadLLuvia > 5) {
-            clima = 1;
-            metrosBaja = (int) (Math.random() * 20);
-            metrosBaja = metrosBaja / 10;
+        if (probabilidadIncidente <= 35) {
+            reduccionMetros = (int) (Math.random() * 20) / 10.0;
+            hayIncidenteCoche = true;
         } else {
-            clima = 0;
+            reduccionMetros = 0;
+            hayIncidenteCoche = false;
         }
 
+        if (probabilidadLluvia <= 5) {
+            estadoClima = 2;
+            reduccionMetros = (int) (Math.random() * 50) / 10.0;
 
+        } else if (probabilidadLluvia <= 10) {
+            estadoClima = 1;
+            reduccionMetros = (int) (Math.random() * 20) / 10.0;
+            
+        } else {
+            estadoClima = 0;
+        }
     }
 }
